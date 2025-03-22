@@ -1,0 +1,434 @@
+/* Custom CSS with new color scheme */
+
+:root {
+    --primary-color: #6C63FF;
+    --secondary-color: #4FACFE;
+    --accent-color: #00F2FE;
+    --dark-bg: #111827;
+    --card-bg: #1a2035;
+    --light-text: #E0E7FF;
+    --highlight: #7366FF;
+    --success: #00E396;
+    --warning: #FEB019;
+    --danger: #FF4560;
+    --info: #00D4FF;
+    --gradient-primary: linear-gradient(45deg, #6C63FF, #4FACFE);
+    --gradient-secondary: linear-gradient(45deg, #00F2FE, #4FACFE);
+    --gradient-success: linear-gradient(45deg, #00E396, #00B07A);
+    --card-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    --glow: 0 0 15px rgba(108, 99, 255, 0.5);
+}
+
+
+/* Main background */
+
+.reportview-container {
+    background: var(--dark-bg);
+    color: var(--light-text);
+}
+
+
+/* Content background */
+
+.main .block-container {
+    background-color: var(--dark-bg);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: var(--card-shadow);
+}
+
+
+/* Sidebar */
+
+.sidebar .sidebar-content {
+    background-color: var(--card-bg);
+}
+
+
+/* Headers */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--light-text);
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    font-size: 2.5rem;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+
+/* Charts and visualizations */
+
+.js-plotly-plot {
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+    margin-bottom: 1.5rem;
+    background-color: var(--card-bg);
+}
+
+
+/* Cards */
+
+.stCard {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stCard:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--glow);
+}
+
+
+/* Input elements */
+
+.stTextInput>div>div {
+    background-color: var(--card-bg);
+    color: var(--light-text);
+    border-radius: 5px;
+}
+
+.stTextInput input {
+    color: var(--light-text);
+}
+
+.stSelectbox>div>div {
+    background-color: var(--card-bg);
+    color: var(--light-text);
+    border-radius: 5px;
+}
+
+.stDateInput>div>div {
+    background-color: var(--card-bg);
+    color: var(--light-text);
+    border-radius: 5px;
+}
+
+
+/* Buttons */
+
+.stButton>button {
+    background: var(--gradient-primary);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.stButton>button:hover {
+    box-shadow: var(--glow);
+    transform: translateY(-2px);
+}
+
+
+/* Download buttons */
+
+.stDownloadButton>button {
+    background: var(--gradient-secondary);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.stDownloadButton>button:hover {
+    box-shadow: var(--glow);
+    transform: translateY(-2px);
+}
+
+
+/* Metrics */
+
+.metric-container {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: var(--card-shadow);
+    border-left: 3px solid var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.metric-label {
+    color: #999;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.metric-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--light-text);
+}
+
+
+/* Tables */
+
+.stDataFrame {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.stDataFrame table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.stDataFrame th {
+    background-color: rgba(108, 99, 255, 0.1);
+    color: var(--light-text);
+    padding: 0.5rem 1rem;
+    text-align: left;
+}
+
+.stDataFrame td {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 0.5rem 1rem;
+}
+
+
+/* Animations */
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px rgba(108, 99, 255, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(108, 99, 255, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(108, 99, 255, 0.3);
+    }
+}
+
+.glow-effect {
+    animation: glow 2s infinite;
+}
+
+
+/* Status indicators */
+
+.status-indicator {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+.status-green {
+    background-color: var(--success);
+    box-shadow: 0 0 5px var(--success);
+}
+
+.status-yellow {
+    background-color: var(--warning);
+    box-shadow: 0 0 5px var(--warning);
+}
+
+.status-red {
+    background-color: var(--danger);
+    box-shadow: 0 0 5px var(--danger);
+}
+
+.status-blue {
+    background-color: var(--info);
+    box-shadow: 0 0 5px var(--info);
+}
+
+
+/* Custom cards */
+
+.custom-card {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    padding: 15px;
+    margin: 5px 0;
+    box-shadow: var(--card-shadow);
+    border-left: 4px solid var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.custom-card:hover {
+    box-shadow: var(--glow);
+    transform: translateY(-3px);
+}
+
+.custom-card-header {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+
+.card-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.card-icon {
+    font-size: 1.8rem;
+    margin-left: 10px;
+    color: var(--primary-color);
+}
+
+
+/* Section headers */
+
+.section-header {
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.section-header:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 80px;
+    background: var(--gradient-primary);
+    border-radius: 10px;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    color: var(--light-text);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* Custom containers */
+
+.glowing-container {
+    border-radius: 10px;
+    border: 1px solid rgba(108, 99, 255, 0.2);
+    box-shadow: var(--glow);
+    padding: 15px;
+    margin: 10px 0;
+    background-color: var(--card-bg);
+}
+
+
+/* Dashboard header */
+
+.dashboard-title {
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-bottom: 0;
+    color: var(--light-text);
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* Neon accent */
+
+.neon-accent {
+    text-shadow: 0 0 5px var(--primary-color), 0 0 10px var(--primary-color);
+}
+
+
+/* Enhanced glow effect for title */
+
+.neon-accent.glow {
+    animation: text-glow 2s infinite;
+    text-shadow: 0 0 7px var(--primary-color), 0 0 15px var(--primary-color), 0 0 25px var(--primary-color);
+}
+
+@keyframes text-glow {
+    0% {
+        text-shadow: 0 0 7px var(--primary-color), 0 0 15px var(--primary-color);
+    }
+    50% {
+        text-shadow: 0 0 20px var(--primary-color), 0 0 30px var(--primary-color), 0 0 40px var(--primary-color);
+    }
+    100% {
+        text-shadow: 0 0 7px var(--primary-color), 0 0 15px var(--primary-color);
+    }
+}
+
+
+/* Support boxes in footer */
+
+.support-box {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    padding: 15px;
+    margin: 5px;
+    flex: 1;
+    box-shadow: var(--card-shadow);
+    transition: all 0.3s ease;
+}
+
+.support-box:hover {
+    box-shadow: var(--glow);
+    transform: translateY(-3px);
+}
+
+.support-box-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+
+.support-box-content div {
+    padding: 4px 0;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.support-box-content div:hover {
+    color: var(--primary-color);
+    transform: translateX(3px);
+}
+
+
+/* Hide hamburger menu and footer */
+
+#MainMenu {
+    visibility: hidden;
+}
+
+footer {
+    visibility: hidden;
+}
